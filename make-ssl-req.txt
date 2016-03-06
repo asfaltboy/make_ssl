@@ -1,0 +1,25 @@
+acme==0.1.0
+cffi==1.5.2
+click==6.2
+cryptography==1.2.2
+enum34==1.1.2
+funcsigs==0.4
+future==0.15.2
+idna==2.0
+ipaddress==1.0.16
+mock==1.3.0
+ndg-httpsclient==0.4.0
+pbr==1.8.1
+pex==1.1.2
+pyasn1==0.1.9
+pycparser==2.14
+pyOpenSSL==0.15.1
+pyparsing==2.1.0
+pyRFC3339==1.0
+pytz==2015.7
+requests==2.9.1
+# simp-le==0.0.1
+https://github.com/kuba/simp_le/archive/master.zip
+six==1.10.0
+Werkzeug==0.11.4
+wheel==0.29.0
