@@ -15,4 +15,4 @@ rm -rf .deps
 rm -rf make_ssl.egg-info/
 rm -rf ~/.pex/build/make_ssl*.whl
 rm -rf $BUILD_TARGET_NAME
-pex -r make-ssl-req.txt -o $BUILD_TARGET_NAME $SET_INDEX . -e make_ssl:cli -v --platform $BUILD_PLATFORM
+pex -r make-ssl-req.txt -o build/$BUILD_TARGET_NAME $SET_INDEX . -e make_ssl:cli -v --platform $BUILD_PLATFORM

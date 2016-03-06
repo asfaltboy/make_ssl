@@ -5,11 +5,12 @@
 <!-- MarkdownTOC autolink=true bracket=round -->
 
 - [Usage](#usage)
-    - [Why do I need it](#why-do-i-need-it)
+  - [Why do I need it](#why-do-i-need-it)
 - [How does it work](#how-does-it-work)
-    - [What's `simp_le`](#whats-simp_le)
-    - [PEX build script](#pex-build-script)
-    - [CLI tool](#cli-tool)
+  - [What's `simp_le`](#whats-simp_le)
+  - [PEX build script](#pex-build-script)
+  - [CLI tool](#cli-tool)
+- [Building](#building)
 
 <!-- /MarkdownTOC -->
 
@@ -69,6 +70,23 @@ This is simple CLI wrapper for running `simp_le`, and aims to provide a step-by-
 Each of the above is also callable as an independent sub-command, e.g. running `make-ssl-osx generate_renew_script` will generate the "renew certificates" script. While each sub-command should prompt for required arguments (or use sane defaults), these can also be provided with options; see `--help` on any sub-command for more info.
 
 To achieve the slick command line interface, [Armin Ronacher][11]'s [`click`][10] is used.
+
+# Building
+
+To build locally (for your machine's architecture) simply run the bash build script:
+
+    $ ./build.sh <platform>
+
+    # for example to build for OSX
+    $ ./build.sh osx
+
+This will create the PEX files at `build/make-ssl-<platform>`.
+
+If you are on OSX and would like to build for Linux, a CentOS based Dockerfile is available to automate that process:
+
+    $ docker build -t make_ssl .
+    $ docker run -v `pwd`/build:/src/pex_make_ssl/build -it make_ssl 
+
 
 [1]: https://letsencrypt.org/
 [2]: https://github.com/kuba/simp_le
